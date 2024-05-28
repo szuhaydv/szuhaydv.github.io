@@ -1,0 +1,110 @@
+/* <-- Font Imports ——> */
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marmelad&display=swap');
+
+header {
+  height: 80px;
+  background-color: #28282B;
+  display: flex;
+  align-items: end;
+}
+
+header .logo {
+  margin-left: 50px;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+  background-color: firebrick;
+  transform: translateY(30px);
+}
+
+nav {
+  display: flex;
+  gap: 80px;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  padding-bottom: 5px;
+  padding-right: 80px;
+  background-color: green;
+  position: relative;
+}
+
+.selected-page-decorator {
+  position: absolute;
+  width: 140px;
+  height: 10px;
+  background-color: white;
+  top: 0%;
+}
+
+nav a {
+  font-family: "Marmelad", sans-serif;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.dark-mode-toggle {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 15px;
+  background-color: #ebf6f7;
+  margin-right: 80px;
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 64px;
+  background-color: yellow;
+}
+
+h1 .small-font {
+  font-family: "Marmelad", sans-serif;
+  font-size: 36px;
+  padding-left: 50px;
+}
+
+.headline-container .buttons-container {
+  background-color: red;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: calc(200vh - 380px);
+  background-color: #ebf6f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .hero {
+  max-width: 1280px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: green;
+  display: flex;
+}
+
+.hero .headline-container {
+  width: 50%;
+  height: 100;
+  background-color: violet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .latest-projects {
+  max-width: 1280px;
+  width: 100%;
+  height: calc(100vh - 300px);
+  background-color: yellow;
+}
+
+footer {
+  height: 300px;
+  background-color: blue;
+}

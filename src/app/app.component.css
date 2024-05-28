@@ -58,7 +58,7 @@ nav a {
 
 main {
   width: 100%;
-  height: calc(200vh - 300px);
+  height: calc(200vh - 380px);
   background-color: #ebf6f7;
   display: flex;
   flex-direction: column;
@@ -103,7 +103,7 @@ h1 .small-font {
   width: 24rem;
   border-radius: 3rem;
   border: none;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", serif;
   font-size: 3.2rem;
   display: flex;
   align-items: center;
@@ -133,8 +133,62 @@ main .professional-image {
 main .latest-projects {
   max-width: 1280px;
   width: 100%;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 380px);
   background-color: yellow;
+  padding: 2rem;
+}
+
+.latest-projects-headline-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest-projects-headline-container h2 {
+  font-family: "Marmelad", serif;
+  font-size: 4rem;
+}
+
+.latest-projects-headline-container .all-projects-button {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.all-projects-button img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+}
+
+.all-projects-button h3 {
+  font-family: "Marmelad", sans-serif;
+  font-size: 2.4rem;
+}
+
+.latest-projects .latest-projects-container {
+  width: 100%;
+  margin-top: 2rem;
+  height: calc(100% - 6rem);
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+  list-style: none;
+}
+
+.latest-projects-container .showcase-project {
+  height: 75%;
+  width: 30%;
+  background-color: green;
+}
+
+.showcase-project.second-project {
+  align-self: center;
+}
+
+.showcase-project.third-project {
+  align-self: flex-end;
 }
 
 footer {

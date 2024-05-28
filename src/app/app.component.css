@@ -1,32 +1,33 @@
 /* <-- Font Imports ——> */
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marmelad&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Abril+Fatface&family=Marmelad&display=swap');
 
 header {
-  height: 80px;
+  height: 8rem;
+  width: 100%;
   background-color: #28282B;
   display: flex;
   align-items: end;
+  position: fixed;
 }
 
 header .logo {
-  margin-left: 50px;
+  margin-left: 5rem;
   margin-right: auto;
-  height: 100px;
-  width: 100px;
-  background-color: firebrick;
-  transform: translateY(30px);
+  height: 15rem;
+  width: 15rem;
+  object-fit: contain;
+  transform: translateY(7.5rem);
 }
 
 nav {
   display: flex;
-  gap: 80px;
+  gap: 8rem;
   height: 100%;
   display: flex;
   align-items: end;
   padding-bottom: 5px;
-  padding-right: 80px;
-  background-color: green;
+  padding-right: 8rem;
   position: relative;
 }
 
@@ -45,34 +46,19 @@ nav a {
   text-decoration: none;
 }
 
-.dark-mode-toggle {
-  height: 30px;
-  width: 30px;
-  margin-bottom: 15px;
+.dark-mode-toggle, .light-mode-toggle {
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 1.5rem;
   background-color: #ebf6f7;
-  margin-right: 80px;
-}
-
-h1 {
-  font-family: "Abril Fatface", serif;
-  font-size: 64px;
-  background-color: yellow;
-}
-
-h1 .small-font {
-  font-family: "Marmelad", sans-serif;
-  font-size: 36px;
-  padding-left: 50px;
-}
-
-.headline-container .buttons-container {
-  background-color: red;
-  width: 100%;
+  border-radius: 1.5rem;
+  margin-right: 8rem;
+  cursor: pointer;
 }
 
 main {
   width: 100%;
-  height: calc(200vh - 380px);
+  height: calc(200vh - 300px);
   background-color: #ebf6f7;
   display: flex;
   flex-direction: column;
@@ -80,21 +66,67 @@ main {
 }
 
 main .hero {
+  margin-top: 8rem;
   max-width: 1280px;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 8rem);
   background-color: green;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.hero .headline-container {
-  width: 50%;
-  height: 100;
-  background-color: violet;
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 6.4rem;
+  background-color: yellow;
+  /* text-align: center; */
+}
+
+h1 .small-font {
+  font-family: "Marmelad", sans-serif;
+  font-size: 3.6rem;
+  padding-left: 5rem;
+}
+
+.headline-container .buttons-container {
+  background-color: blue;
+  width: 100%;
+  margin-top: 5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.buttons-container .resume-button, .buttons-container .contact-button {
+  height: 6rem;
+  width: 24rem;
+  border-radius: 3rem;
+  border: none;
+  font-family: "Roboto Slab";
+  font-size: 3.2rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  box-shadow: 3px 5px 6px 3px rgba(0, 0, 0, 0.42);
+  cursor: pointer;
+}
+
+.buttons-container .contact-button {
+  background-color: #FF204E;
+  color: white;
+}
+
+.resume-button img, .contact-button img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+}
+
+main .professional-image {
+  width: 40%;
+  height: 100%;
+  background-color: teal;
 }
 
 main .latest-projects {

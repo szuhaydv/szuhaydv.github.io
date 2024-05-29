@@ -11,6 +11,28 @@ export class HeaderComponent {
   showSidebar = false
   isDropdownActive = false
 
+  pageTitles = ["Home", "Skills", "Projects", "About", "Contact"]
+  pageTitleWidths: number[] = []
+  decoratorOffset = 0
+
+  ngOnInit() {
+    this.calculateDecoratorOffset(0);
+  }
+
+  calculateDecoratorOffset(id: number) {
+    if (this.pageTitleWidths.length == 0) {
+      document.querySelectorAll('.pc-header .page-title').forEach(listElement => {
+        this.pageTitleWidths.push((listElement as HTMLElement).offsetWidth)
+      })
+    } 
+    console.log("Widths:", this.pageTitleWidths)
+    let offset = this.pageTitleWidths[0] / 2
+    for (let i = 0; i < id; i++) {
+      offset += this.pageTitleWidths[i] / 2 + this.pageTitleWidths[i + 1] / 2
+    }
+    this.decoratorOffset = offset
+  }
+
   toggleSidebar() {
     this.showSidebar = !this.showSidebar
   }

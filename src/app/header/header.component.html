@@ -15,19 +15,19 @@
   </div>
   <div class="pc-header" >
     <nav>
-      <div class="selected-page-decorator"></div>
+      <div [style.left]="decoratorOffset + 'px'" class="selected-page-decorator"></div>
       <ul>
-        <li><a href="">Home</a></li>
-        <li (mouseover)="showDropdown()" (mouseout)="hideDropdown()" class="skills">
-          <a href="">Skills</a>
+        <li class="page-title"><a (click)="calculateDecoratorOffset(0)">Home</a></li>
+        <li class="page-title skills" (mouseover)="showDropdown()" (mouseout)="hideDropdown()">
+          <a (click)="calculateDecoratorOffset(1)">Skills</a>
           <ul [style.display]="isDropdownActive ? 'flex' : 'none'" class="dropdown">
             <li ><a href="">Current Skillset</a></li>
             <li><a href="">Learning Projects</a></li>
           </ul>
         </li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+        <li class="page-title"><a (click)="calculateDecoratorOffset(2)" >Projects</a></li>
+        <li class="page-title"><a (click)="calculateDecoratorOffset(3)" >About</a></li>
+        <li class="page-title"><a (click)="calculateDecoratorOffset(4)" >Contact</a></li>
       </ul>
     </nav>
     @if (lightMode) {

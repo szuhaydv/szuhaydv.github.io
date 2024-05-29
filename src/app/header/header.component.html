@@ -30,7 +30,11 @@
         <li><a href="">Contact</a></li>
       </ul>
     </nav>
-    <img src="../../assets/light-mode-toggle.svg" alt="Icon of the sun" class="light-mode-toggle">
+    @if (lightMode) {
+      <img (click)="updateColorScheme()" src="../../assets/light-mode-toggle.svg" alt="Icon of the sun" class="light-mode-toggle">
+    } @else {
+      <img (click)="updateColorScheme()" src="../../assets/dark-mode-toggle.svg" alt="Icon of the moon" class="light-mode-toggle">
+    }
   </div>
   
 </header>

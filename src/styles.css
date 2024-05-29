@@ -1,3 +1,11 @@
+:root {
+  --clr-background: #ebf6f7;
+  --clr-header: #28282B;
+  --clr-black-white: #fff;
+  --clr-bnw-inverse: #000;
+  --clr-highlight: #343438; 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,3 +21,4 @@ html {
     font-size: 42%;
   }
 }
+

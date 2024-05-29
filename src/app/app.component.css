@@ -5,7 +5,7 @@
 main {
   width: 100%;
   height: calc(200vh - 380px);
-  background-color: #ebf6f7;
+  background-color: var(--clr-background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +26,7 @@ h1 {
   font-family: "Abril Fatface", serif;
   font-size: 6.4rem;
   background-color: yellow;
+  color: var(--clr-bnw-inverse)
   /* text-align: center; */
 }
 

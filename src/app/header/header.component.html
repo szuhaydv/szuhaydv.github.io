@@ -1,0 +1,30 @@
+<header>
+  <img src="../../assets/logo.svg" alt="Logo of David Szuhay" class="logo">
+  <div class="mobile-header">
+    <img (click)="toggleSidebar()" src="../../assets/hamburger.svg" alt="Hamburger menu icon">
+    <nav>
+      <ul [class.active]="showSidebar">
+        <li class="close-icon" (click)="toggleSidebar()"><img src="../../assets/close-icon.svg" alt="X icon for closing"></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Skills</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="pc-header">
+    <nav>
+      <div class="selected-page-decorator"></div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Skills</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    <img src="../../assets/light-mode-toggle.svg" alt="Icon of the sun" class="light-mode-toggle">
+  </div>
+  
+</header>

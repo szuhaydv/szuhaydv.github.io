@@ -13,12 +13,18 @@
       </ul>
     </nav>
   </div>
-  <div class="pc-header">
+  <div class="pc-header" >
     <nav>
       <div class="selected-page-decorator"></div>
       <ul>
         <li><a href="">Home</a></li>
-        <li><a href="">Skills</a></li>
+        <li (mouseover)="showDropdown()" (mouseout)="hideDropdown()" class="skills">
+          <a href="">Skills</a>
+          <ul [style.display]="isDropdownActive ? 'flex' : 'none'" class="dropdown">
+            <li ><a href="">Current Skillset</a></li>
+            <li><a href="">Learning Projects</a></li>
+          </ul>
+        </li>
         <li><a href="">Projects</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>

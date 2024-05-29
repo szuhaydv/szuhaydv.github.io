@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +9,17 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeaderComponent {
   showSidebar = false
+  isDropdownActive = false
 
   toggleSidebar() {
     this.showSidebar = !this.showSidebar
+  }
+
+  showDropdown() {
+    this.isDropdownActive = true
+  }
+
+  hideDropdown() {
+    this.isDropdownActive = false
   }
 }

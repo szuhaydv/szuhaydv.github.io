@@ -146,4 +146,19 @@ footer {
   main .hero {
     flex-direction: column;
   }
+  main .professional-image {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .resume-button, .contact-button {
+    width: 20rem !important;
+    height: 5rem !important;
+  }
+
+  .latest-projects-headline-container h2 {
+    font-size: 3.2rem;
+  }
 }

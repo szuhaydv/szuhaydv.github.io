@@ -18,13 +18,30 @@
   object-fit: contain;
 }
 
-button {
-  position: fixed;
-  top: 50%;
+.button-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container button {
+  height: 100%;
+  border: 0;
+}
+
+.button-container img {
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
 }
 
 .state-two {
-  transform: translate(-45%, -10%);
+  transform: translate(-40%, -10%);
 }
 
 .state-three {
@@ -36,5 +53,5 @@ button {
 }
 
 .state-five {
-  transform: translate(-10%, -70%)
+  transform: translate(-7.5%, -70%)
 }

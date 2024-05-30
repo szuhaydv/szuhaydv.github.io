@@ -17,9 +17,9 @@
     <nav>
       <div [style.left]="decoratorOffset + 'px'" class="selected-page-decorator"></div>
       <ul>
-        <li class="page-title"><a (click)="calculateDecoratorOffset(0)">Home</a></li>
+        <li class="page-title"><a (click)="calculateDecoratorOffset(0)" routerLink="/" routerLinkActive="active">Home</a></li>
         <li class="page-title skills" (mouseover)="showDropdown()" (mouseout)="hideDropdown()">
-          <a (click)="calculateDecoratorOffset(1)">Skills</a>
+          <a (click)="calculateDecoratorOffset(1)" routerLink="/skills" routerLinkActive="active">Skills</a>
           <ul [style.display]="isDropdownActive ? 'flex' : 'none'" class="dropdown">
             <li ><a href="">Current Skillset</a></li>
             <li><a href="">Learning Projects</a></li>

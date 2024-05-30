@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { SkillsComponent } from './skills/skills.component';
-import { MainComponent } from './main/main.component';
+import { MinimalLayoutComponent } from './minimal-layout/minimal-layout.component';
+import { FullLayoutComponent } from './full-layout/full-layout.component';
 
 export const routes: Routes = [
-  { path: 'skills', component: SkillsComponent},
-  { path: '', component: MainComponent}
+  { path: 'skills', component: MinimalLayoutComponent},
+  { path: '', component: FullLayoutComponent}
 ];

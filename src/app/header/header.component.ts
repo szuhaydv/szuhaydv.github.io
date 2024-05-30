@@ -26,7 +26,6 @@ export class HeaderComponent {
         this.pageTitleWidths.push((listElement as HTMLElement).offsetWidth)
       })
     } 
-    console.log("Widths:", this.pageTitleWidths)
     let offset = this.pageTitleWidths[0] / 2
     for (let i = 0; i < id; i++) {
       offset += this.pageTitleWidths[i] / 2 + this.pageTitleWidths[i + 1] / 2

@@ -3,6 +3,7 @@ header {
   width: 100%;
   background-color: var(--clr-header);
   position: sticky;
+  z-index: 100;
   top: 0;
   display: flex
 }

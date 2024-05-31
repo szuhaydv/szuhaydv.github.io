@@ -2,12 +2,9 @@
   <div [@step]="currentState" class="image-container">
     <img src="../../../assets/skills.png" alt="A large image displaying David Szuhay's web developer skills on sticky notes">
   </div>
-  <div class="button-container">
-    <button class="left-button" (click)="stepBackwards()">
-      <img src="../../../assets/arrow-left.png" alt="An icon of a keyboard's arrow left key">
-    </button>
-    <button class="right-button" (click)="stepForward()">
-      <img src="../../../assets/arrow-right.png" alt="An icon of a keyboard's arrow right key">
+  <div class="button-container" [style.justify-content]="containerAlignment" >
+    <button [@showButton]="showButton" (@showButton.done)="showAgain()" (click)="stepForward()">
+      <img [style.transform]="buttonRotation" src="../../../assets/arrow-right.png" alt="An icon of a keyboard's arrow right key">
     </button>
   </div>
 </section>

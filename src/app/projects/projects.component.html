@@ -4,6 +4,54 @@
     <h2 [countUp]="techCount" [duration]="duration" [title]="'Technologies'"></h2>
     <h2 [countUp]="projectCount" [duration]="duration" [title]="'Projects'"></h2>
   </div>
+  <div class="filter-buttons">
+    <div class="framework-filter">
+      <button [style.background-color]="showFrameworks || isAnyFrameworkSelected() ? '#595959' : '#D9D9D9'" [style.color]="showFrameworks || isAnyFrameworkSelected() ? 'white' : 'black'" (click)="toggleFrameworks()">
+        Framework
+        <div class="is-filtered-container">
+          <img [style.height]="'60%'" [style.display]="isAnyFrameworkSelected() ? 'block' : 'none'" src="../../assets/selected.svg" alt="">
+        </div>
+        <svg [style.transform]="showFrameworks ? 'rotate(180deg)' : 'rotate(0)'" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9L12 15L18 9" [style.stroke]="showFrameworks || isAnyFrameworkSelected() ? '#ffffff' : '#000000' " stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="framework-options-container" (mouseleave)="leaveFrameworks()" [style.display]="showFrameworks ? 'flex' : 'none' ">
+        @for (framework of frameworks.frameworks; track framework.title) {
+          <div class="option">
+            <i (click)="selectFramework(framework.id)" [style.background-color]="framework.isChecked ? '#2196F3' : '#eee' ">
+              @if (framework.isChecked) {
+                <img src="../../assets/checkmark.svg" alt="Checkmark Icon">
+              }
+            </i>
+            {{framework.title}}
+          </div>
+        }
+      </div>
+    </div>
+    <div class="capability-filter">
+      <button [style.background-color]="showCapabilites || isAnyCapabilitySelected() ? '#595959' : '#D9D9D9'" [style.color]="showCapabilites || isAnyCapabilitySelected() ? 'white' : 'black'" (click)="toggleCapabilites()">
+        Capabilites
+        <div class="is-filtered-container">
+          <img [style.height]="'60%'" [style.display]="isAnyCapabilitySelected() ? 'block' : 'none'" src="../../assets/selected.svg" alt="">
+        </div>
+        <svg [style.transform]="showCapabilites ? 'rotate(180deg)' : 'rotate(0)'" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9L12 15L18 9" [style.stroke]="showCapabilites || isAnyCapabilitySelected() ? '#ffffff' : '#000000' " stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="capability-options-container" (mouseleave)="leaveCapabilities()" [style.display]="showCapabilites ? 'flex' : 'none' ">
+        @for (capability of capabilities; track capability.id) {
+          <div class="option">
+            <i (click)="selectCapability(capability.id)" [style.background-color]="capability.isChecked ? '#2196F3' : '#eee' ">
+              @if (capability.isChecked) {
+                <img src="../../assets/checkmark.svg" alt="Checkmark Icon">
+              }
+            </i>
+            {{capability.title}}
+          </div>
+        }
+      </div>
+    </div>
+  </div>
   <div class="card-container">
     <div class="card">
       <img src="../../assets/portfolio.png" alt="" class="cover-image">

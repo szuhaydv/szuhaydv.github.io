@@ -45,12 +45,16 @@ export class Project {
   title: string
   description: string
   isDeployed: boolean
+  websiteLink?: string
 
-  constructor(id: number, image: string, title: string, description: string, isDeployed: boolean) {
+  constructor(id: number, image: string, title: string, description: string, isDeployed: boolean, websiteLink?: string) {
     this.id = id
     this.image = image
     this.title = title
     this.description = description
     this.isDeployed = isDeployed
+    if (websiteLink) {
+      this.websiteLink = websiteLink
+    }
   }
 }

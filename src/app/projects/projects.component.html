@@ -53,26 +53,9 @@
     </div>
   </div>
   <div class="card-container">
-    <div class="card">
-      <img src="../../assets/portfolio.png" alt="" class="cover-image">
-      <button class="github-link">
-        <img src="../../assets/github-white.svg" alt="">
-      </button>
-      <div class="card-info">
-        <h3>Original Portfolio</h3>
-        <p>Lorem ipsum dolor sit amet consectetur. Tempus nunc interdum aliquam a purus.</p>
-        <div class="button-container">
-          <button>
-            Website <img src="../../assets/website.svg" alt="">
-          </button>
-          <button>
-            Learn More <img src="../../assets/info.svg" alt="">
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    @for (project of projects; track project.id) {
+      <app-card [card]="project"/>
+      
+    }
   </div>
 </section>

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CountUpDirective } from '../count-up.directive';
-import { Frameworks, Framework, Capability } from './filterClasses';
+import { Frameworks, Framework, Capability, Project } from './filterClasses';
+import { CardComponent } from './card/card.component';
 
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CountUpDirective],
+  imports: [CountUpDirective, CardComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
@@ -82,6 +83,19 @@ export class ProjectsComponent {
   selectCapability(id: number) {
     this.capabilities[id].isChecked = !this.capabilities[id].isChecked
   }
+
+  projects = [
+    new Project(0, 'assets/portfolio.png', 'Original Portfolio', "The original version of my portfolio website", true),
+    new Project(1, 'assets/mapex.png', 'Mapex', "Pindrop your favourite travel destinations and create beautiful maps to share!", true),
+    new Project(2, 'assets/portfolio.png', 'Modern Portfolio', "This is where you are currently!", true),
+    new Project(3, 'assets/portfolio.png', 'Space-Spice', "A recipe search website concept for a small restaurant", true),
+    new Project(4, 'assets/portfolio.png', 'RankMaster', "A minigame app based on ranking tier lists!", true),
+    new Project(5, 'assets/portfolio.png', 'Mr. Chili', "A website for a small business in the field of chilis!", true),
+    new Project(6, 'assets/portfolio.png', 'Cool ToDo List', "My first iOS app, a nice looking todo list", false),
+    new Project(7, 'assets/portfolio.png', 'Encryption (self-written)', "Self written encryption and decryption protocol", false),
+    new Project(8, 'assets/portfolio.png', 'MapX', "A real-life map app where fog envelops unexlplored areas", false),
+    new Project(9, 'assets/portfolio.png', 'Xezame', "A recipe website which based on ingredients in your frdige tells you recipes", false),
+  ]
 
   codingCount = 1000
   techCount = 40

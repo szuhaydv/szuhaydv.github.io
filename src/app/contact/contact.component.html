@@ -1,1 +1,36 @@
-<p>contact works!</p>
+<section class="contact">
+  <div class="contact-options">
+    <a href="https://mail.google.com/mail/?view=cm&to=szuhaydv@gmail.com" target="_blank">
+      <div class="my-email">
+        <img src="assets/mail.svg" alt="Black mail icon">
+        <p>szuhaydv&#64;gmail.com</p>
+      </div>
+    </a>
+    <div class="my-extras">
+      <a href="https://www.linkedin.com/in/szuhaydv" target="_blank">
+        <img src="assets/linkedin-dark.svg" alt="Black icon of linkedin">
+      </a>
+      <a href="https://github.com/Szuhaydv" target="_blank">
+        <img src="assets/github.svg" alt="Black icon of GitHub">
+      </a>
+    </div>
+  </div>
+  <form (submit)="sendEmail($event)">
+    <h3>Name</h3>
+    <div class="name-inputs">
+      <div class="firstName">
+        <input name="first_name" id="firstName" type="text">
+        <label for="firstName">First Name</label>
+      </div>
+      <div class="lastName">
+        <input name="last_name" id="lastName" type="text">
+        <label for="lastName">Last Name</label>
+      </div>
+    </div>
+    <label for="email">Email</label>
+    <input name="from_email">
+    <label for="message">Message</label>
+    <textarea name="message"></textarea>
+    <button class="button-21" role="button" value="Send">SEND</button>
+  </form> 
+</section>

@@ -29,7 +29,6 @@ export class ProjectsComponent {
     this.showFrameworks = !this.showFrameworks
   }
   leaveFrameworks() {
-    this.filteredSearch()
     if (this.showFrameworks) {
       this.showFrameworks = false
     }
@@ -71,7 +70,6 @@ export class ProjectsComponent {
     this.showCapabilites = !this.showCapabilites
   }
   leaveCapabilities() {
-    this.filteredSearch()
     if (this.showCapabilites) {
       this.showCapabilites = false
     } 
@@ -79,10 +77,12 @@ export class ProjectsComponent {
 
   selectFramework(id: number) {
     this.frameworks[id].isChecked = !this.frameworks  [id].isChecked
+    this.filteredSearch()
   }
 
   selectCapability(id: number) {
     this.capabilities[id].isChecked = !this.capabilities[id].isChecked
+    this.filteredSearch()
   }
 
   

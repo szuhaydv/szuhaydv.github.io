@@ -17,6 +17,10 @@ button.github-link {
   background-color: black;
 }
 
+.github-link a {
+  height: 100%;
+}
+
 button.github-link img {
   height: 100%;
 }

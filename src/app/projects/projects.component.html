@@ -16,7 +16,7 @@
         </svg>
       </button>
       <div class="framework-options-container" (mouseleave)="leaveFrameworks()" [style.display]="showFrameworks ? 'flex' : 'none' ">
-        @for (framework of frameworks.frameworks; track framework.title) {
+        @for (framework of frameworks; track framework.title) {
           <div class="option">
             <i (click)="selectFramework(framework.id)" [style.background-color]="framework.isChecked ? '#2196F3' : '#eee' ">
               @if (framework.isChecked) {

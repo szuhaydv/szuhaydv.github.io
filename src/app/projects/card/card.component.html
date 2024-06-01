@@ -1,6 +1,8 @@
 <img [src]="card.image" alt="" class="cover-image">
 <button class="github-link">
-  <img src="../../assets/github-white.svg" alt="">
+  <a [href]="card.githublink" target="_blank">
+    <img src="../../assets/github-white.svg" alt="">
+  </a>
 </button>
 <div class="card-info">
   <h3>{{card.title}}</h3>

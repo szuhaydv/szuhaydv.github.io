@@ -41,11 +41,11 @@ export class ProjectsComponent {
   )
   capabilities = [
     new Capability(0, "API calls"),
-    new Capability(0, "FullStack"),
-    new Capability(1, "Database"),
-    new Capability(2, "Auth"),
-    new Capability(3, "SEO"),
-    new Capability(4, "Deployed"),
+    new Capability(1, "FullStack"),
+    new Capability(2, "Database"),
+    new Capability(3, "Auth"),
+    new Capability(4, "SEO"),
+    new Capability(5, "Deployed"),
   ]
   showCapabilites = false
   isAnyCapabilitySelected() {
@@ -56,6 +56,15 @@ export class ProjectsComponent {
     }
     return false
   }
+  numCapabilitesSelected() {
+    let num  = 0
+    for (const capability of this.capabilities) {
+      if (capability.isChecked) {
+        num += 1
+      }
+    }
+    return num
+  }
   toggleCapabilites() {
     this.showCapabilites = !this.showCapabilites
   }
@@ -64,6 +73,7 @@ export class ProjectsComponent {
       this.showCapabilites = false
     } 
   }
+
 
   selectFramework(id: number) {
     this.frameworks.isChecked = id

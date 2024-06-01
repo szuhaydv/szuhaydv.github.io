@@ -48,6 +48,21 @@
   align-items: center;
 }
 
+.capability-filter .is-filtered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 2px solid white;
+  color: white;
+  transform: scale(0.75);
+}
+
+.filter-buttons .capability-filter button {
+  gap: 1rem
+}
+
 
 .filter-buttons button {
   height: 6rem;

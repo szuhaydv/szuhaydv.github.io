@@ -1,10 +1,10 @@
 <header>
-  <img src="../../assets/logo.svg" alt="Logo of David Szuhay" class="logo">
+  <img src="assets/logo.svg" alt="Logo of David Szuhay" class="logo">
   <div class="mobile-header">
-    <img (click)="toggleSidebar()" src="../../assets/hamburger.svg" alt="Hamburger menu icon">
+    <img (click)="toggleSidebar()" src="assets/hamburger.svg" alt="Hamburger menu icon">
     <nav>
       <ul [class.active]="showSidebar">
-        <li class="close-icon" (click)="toggleSidebar()"><img src="../../assets/close-icon.svg" alt="X icon for closing"></li>
+        <li class="close-icon" (click)="toggleSidebar()"><img src="assets/close-icon.svg" alt="X icon for closing"></li>
         <li><a href="">Home</a></li>
         <li><a href="">Skills</a></li>
         <li><a href="">Projects</a></li>
@@ -26,14 +26,14 @@
           </ul>
         </li>
         <li class="page-title"><a (click)="calculateDecoratorOffset(2)" routerLink="/projects" routerLinkActive="active">Projects</a></li>
-        <li class="page-title"><a (click)="calculateDecoratorOffset(3)" >About</a></li>
-        <li class="page-title"><a (click)="calculateDecoratorOffset(4)" >Contact</a></li>
+        <li class="page-title"><a (click)="calculateDecoratorOffset(3)" routerLink="/about" routerLinkActive="active">About</a></li>
+        <li class="page-title"><a (click)="calculateDecoratorOffset(4)" routerLink="/contact" routerLinkActive="active">Contact</a></li>
       </ul>
     </nav>
     @if (lightMode) {
-      <img (click)="updateColorScheme()" src="../../assets/light-mode-toggle.svg" alt="Icon of the sun" class="light-mode-toggle">
+      <img (click)="updateColorScheme()" src="assets/light-mode-toggle.svg" alt="Icon of the sun" class="light-mode-toggle">
     } @else {
-      <img (click)="updateColorScheme()" src="../../assets/dark-mode-toggle.svg" alt="Icon of the moon" class="light-mode-toggle">
+      <img (click)="updateColorScheme()" src="assets/dark-mode-toggle.svg" alt="Icon of the moon" class="light-mode-toggle">
     }
   </div>
   

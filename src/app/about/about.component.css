@@ -1,0 +1,38 @@
+section {
+  max-width: 1280px;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  margin: auto;
+  padding: 2.5% 7.5%;
+}
+
+section .paragraph-container {
+  height: 19%;
+  width: 100%;
+  margin-bottom: calc(5% / 4);
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+section .paragraph-container:last-child {
+  margin-bottom: 0 !important;
+}
+
+.paragraph-container img {
+  width: 20%;
+  height: 100%;
+  object-fit: contain;
+}
+.paragraph-container p {
+  width: 80%;
+  font-size: 2.4rem;
+  font-family: "Marmelad";
+  line-height: 150%;
+  margin: auto 0;
+}
+
+b {
+  font-family: "Roboto Slab";
+  font-size: 2.4rem;
+}

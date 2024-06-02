@@ -1,12 +1,12 @@
 <app-main/>
 <aside>
-  <a (mouseover)="animateButton($event)" href="https://github.com/Szuhaydv" target="_blank">
+  <a [@buzz]="githubState" (mouseover)="githubHover()" (@buzz.done)="githubHoverEnded()" href="https://github.com/Szuhaydv" target="_blank">
     <img src="../assets/github.svg" alt="Icon of GitHub">
   </a>
-  <a (mouseover)="animateButton($event)" href="https://www.linkedin.com/in/szuhaydv" target="_blank">
+  <a [@buzz]="linkedinState" (mouseover)="linkedinHover()" (@buzz.done)="linkedinHoverEnded()" href="https://www.linkedin.com/in/szuhaydv" target="_blank">
     <img src="../assets/linkedin.svg" alt="Icon of LinkedIn">
   </a>
-  <a (mouseover)="animateButton($event)" href="https://mail.google.com/mail/?view=cm&to=szuhaydv@gmail.com" target="_blank">
+  <a [@buzz]="gmailState" (mouseover)="gmailHover()" (@buzz.done)="gmailHoverEnded()" href="https://mail.google.com/mail/?view=cm&to=szuhaydv@gmail.com" target="_blank">
     <img src="../assets/gmail.svg" alt="Icon of Gmail">
   </a>
 </aside>

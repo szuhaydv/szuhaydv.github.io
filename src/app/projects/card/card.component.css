@@ -62,14 +62,9 @@ button.github-link img {
 .card-info button:first-child {
   border: 2px solid black !important;
   background-color: white;
-  transition: all 0.3s linear;
-}
-.card-info button:first-child:hover, .card-info button:last-child:hover {
-  transform: scale(1.05);
 }
 
 .card-info button:last-child {
-  transition: all 0.3s linear;
   background-color: black;
   color: white;
 }
@@ -77,6 +72,7 @@ button.github-link img {
 
 button {
   height: 4rem;
+  transition: all 0.3s linear;
   border-radius: 1rem;
   border: none;
   display: flex;
@@ -88,6 +84,10 @@ button {
   line-height: 2rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 button img {

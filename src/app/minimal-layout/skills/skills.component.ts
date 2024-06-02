@@ -26,6 +26,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent implements AfterViewInit {
+  imageString = 'assets/skills.png'
+
   ngAfterViewInit() {
     this.showButton = 'show'
   }

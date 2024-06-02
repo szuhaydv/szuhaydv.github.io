@@ -1,10 +1,10 @@
 <section class="skills">
   <div [@step]="currentState" class="image-container">
-    <img src="../../../assets/skills.png" alt="A large image displaying David Szuhay's web developer skills on sticky notes">
+    <img [src]="imageString" alt="A large image displaying David Szuhay's coding skills on sticky notes">
   </div>
   <div class="button-container" [style.justify-content]="containerAlignment" >
     <button [@showButton]="showButton" (@showButton.done)="showAgain()" (click)="stepForward()">
-      <img [style.transform]="buttonRotation" src="../../../assets/arrow-right.png" alt="An icon of a keyboard's arrow right key">
+      <img [style.transform]="buttonRotation" src="assets/arrow-right.png" alt="An icon of a keyboard's arrow right key">
     </button>
   </div>
 </section>

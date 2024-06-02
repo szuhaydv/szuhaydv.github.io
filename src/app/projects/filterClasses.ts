@@ -23,14 +23,14 @@ export class Capability {
 export class Project {
   id: number
   image: string
-  githublink: string
   title: string
   description: string
   tags: string[]
   isDeployed: boolean
   websiteLink?: string
+  githublink?: string
 
-  constructor(id: number, image: string, githublink: string, title: string, description: string, tags: string[], isDeployed: boolean, websiteLink?: string) {
+  constructor(id: number, image: string, title: string, description: string, tags: string[], isDeployed: boolean, websiteLink?: string, githublink?: string,) {
     this.id = id
     this.image = image
     this.githublink = githublink
@@ -38,8 +38,6 @@ export class Project {
     this.description = description
     this.tags = tags
     this.isDeployed = isDeployed
-    if (websiteLink) {
-      this.websiteLink = websiteLink
-    }
+    this.websiteLink = websiteLink
   }
 }

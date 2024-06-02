@@ -9,5 +9,5 @@ import { Project } from '../filterClasses';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  @Input() card: Project = new Project(Math.random()*1000, 'assets/error.svg', '', "Error", "", [], false)
+  @Input() card: Project = new Project(Math.random()*1000, 'assets/error.svg', 'Error', "", [], false)
 }

@@ -1,16 +1,21 @@
 <img [src]="card.image" alt="" class="cover-image">
-<button class="github-link">
-  <a [href]="card.githublink" target="_blank">
-    <img src="../../assets/github-white.svg" alt="">
-  </a>
-</button>
+
+@if (card.githublink) {
+  <button class="github-link">
+    <a [href]="card.githublink" target="_blank">
+      <img src="../../assets/github-white.svg" alt="">
+    </a>
+  </button>
+}
 <div class="card-info">
   <h3>{{card.title}}</h3>
   <p>{{card.description}}</p>
   <div class="button-container">
     @if (card.isDeployed) {
       <button>
-        Website <img src="../../assets/website.svg" alt="">
+        <a [href]="card.websiteLink" target="_blank">
+          Website <img src="../../assets/website.svg" alt="">
+        </a>
       </button>
     }
     <button>

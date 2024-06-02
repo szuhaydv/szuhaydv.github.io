@@ -24,16 +24,22 @@
   </section>
   <section class="latest-projects">
     <div class="latest-projects-headline-container">
-      <h2>Latest Projects</h2>
-      <div class="all-projects-button">
+      <h2 id="cubed">LATEST PROJECTS</h2>
+      <div routerLink="/projects" class="all-projects-button">
         <img src="../assets/list.svg" alt="List icon">
         <h3>All Projects</h3>
       </div>
     </div>
     <ul class="latest-projects-container">
-      <li class="showcase-project"></li>
-      <li class="showcase-project second-project"></li>
-      <li class="showcase-project third-project"></li>
+      <li class="showcase-project">
+        <app-card [card]="latestProjects[0]"/>
+      </li>
+      <li class="showcase-project second-project">
+        <app-card [card]="latestProjects[1]"/>
+      </li>
+      <li class="showcase-project third-project">
+        <app-card [card]="latestProjects[2]"/>
+      </li>
     </ul>
   </section>
 </main>

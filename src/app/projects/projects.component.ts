@@ -87,16 +87,16 @@ export class ProjectsComponent {
 
   
   projectsData = [
-    new Project(0, 'assets/portfolio.png', 'https://github.com/Szuhaydv/portfolio', 'Original Portfolio', "The original version of my portfolio website", ["React", "Deployed"], true),
-    new Project(1, 'assets/mapex.png', 'https://github.com/Szuhaydv/mapex-frontend', 'Mapex', "Pindrop your favourite travel destinations and create beautiful maps to share!", ["React", "Full Stack", "Database", "API Calls", "Auth", "Deployed"], true, "https://mapexsite.netlify.app/"),
-    new Project(2, 'assets/newportfolio.png', 'https://github.com/Szuhaydv/portfolio-new', 'Modern Portfolio', "This is where you are currently!", ["Angular", "Deployed"], true),
-    new Project(3, 'assets/spacespice.png', 'https://github.com/Szuhaydv/space-spice', 'Space-Spice', "A recipe search website concept for a small restaurant", ["React", "API Calls", "Deployed"], true, "https://space-spice.netlify.app/"),
-    new Project(4, 'assets/rankmaster.png', 'https://github.com/Szuhaydv/RankMaster', 'RankMaster', "A minigame app based on ranking tier lists!", ["Mobile", "Full Stack", "Database", "API Calls", "Auth"], false),
-    new Project(5, 'assets/portfolio.png', '', 'Mr. Chili', "A website for a small business in the field of chilis!", ["Angular", "Deployed", "SEO"], true),
-    new Project(6, 'assets/cooltodo.png', 'https://github.com/Szuhaydv/Cool-ToDo-List', 'Cool ToDo List', "My first iOS app, a nice looking todo list", ["Mobile", "Full Stack", "API Calls", "Database", "Auth"], false),
-    new Project(7, 'assets/encrypt.png', 'https://github.com/Szuhaydv/todo-backend', 'Encryption (self-written)', "Self written encryption and decryption protocol", ["React", "API Calls", "Auth"], false),
-    new Project(8, 'assets/mapx.png', 'https://github.com/Szuhaydv/MapX', 'MapX', "A real-life map app where fog envelops unexlplored areas", ["Mobile", "Auth"], false),
-    new Project(9, 'assets/xezame.png', '', 'Xezame', "A recipe website which based on ingredients in your frdige tells you recipes", [], false),
+    new Project(0, 'assets/portfolio.png', 'Original Portfolio', "The original version of my portfolio website", ["React", "Deployed"], true, undefined, 'https://github.com/Szuhaydv/portfolio'),
+    new Project(1, 'assets/mapex.png', 'Mapex', "Pindrop your favourite travel destinations and create beautiful maps to share!", ["React", "Full Stack", "Database", "API Calls", "Auth", "Deployed"], true, "https://mapexsite.netlify.app/", 'https://github.com/Szuhaydv/mapex-frontend'),
+    new Project(2, 'assets/newportfolio.png', 'Modern Portfolio', "This is where you are currently!", ["Angular", "Deployed"], true, undefined, 'https://github.com/Szuhaydv/portfolio-new'),
+    new Project(3, 'assets/spacespice.png', 'Space-Spice', "A recipe search website concept for a small restaurant", ["React", "API Calls", "Deployed"], true, "https://space-spice.netlify.app/", 'https://github.com/Szuhaydv/space-spice'),
+    new Project(4, 'assets/rankmaster.png', 'RankMaster', "A minigame app based on ranking tier lists!", ["Mobile", "Full Stack", "Database", "API Calls", "Auth"], false, undefined, 'https://github.com/Szuhaydv/RankMaster'),
+    new Project(5, 'assets/portfolio.png', 'Mr. Chili', "A website for a small business in the field of chilis!", ["Angular", "Deployed", "SEO"], true),
+    new Project(6, 'assets/cooltodo.png', 'Cool ToDo List', "My first iOS app, a nice looking todo list", ["Mobile", "Full Stack", "API Calls", "Database", "Auth"], false, undefined, 'https://github.com/Szuhaydv/Cool-ToDo-List'),
+    new Project(7, 'assets/encrypt.png', 'Encryption (self-written)', "Self written encryption and decryption protocol", ["React", "API Calls", "Auth"], false, undefined, 'https://github.com/Szuhaydv/todo-backend'),
+    new Project(8, 'assets/mapx.png', 'MapX', "A real-life map app where fog envelops unexlplored areas", ["Mobile", "Auth"], false, undefined, 'https://github.com/Szuhaydv/MapX'),
+    new Project(9, 'assets/xezame.png', 'Xezame', "A recipe website which based on ingredients in your frdige tells you recipes", [], false),
   ]
   
   projects = [ ...this.projectsData ]

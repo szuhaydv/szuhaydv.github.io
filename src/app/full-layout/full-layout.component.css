@@ -27,9 +27,17 @@ a img {
   object-fit: contain;
 }
 
+a {
+  transform: rotate(0deg);
+}
+
+a:hover {
+  animation: buttonHover 1s;
+}
+
 footer {
-  height: 300px;
-  background-color: blue;
+  height: 250px;
+  background-color: #31363F;
 }
 
 @media only screen and (max-width: 1200px) {

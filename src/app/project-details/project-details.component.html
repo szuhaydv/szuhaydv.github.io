@@ -1,15 +1,19 @@
 <main class="project-details">
   <div class="headline-container">
-    <h1>Xezame</h1>
-    <a href="">
-      <img src="assets/github.svg" alt="">
-    </a>
-    <a href="">
-      <img src="assets/website.svg" alt="">
-    </a>
+    <h1>{{project.title}}</h1>
+    @if (project.githublink) {
+      <a [href]="project.githublink" target="_blank">
+        <img src="assets/github.svg" alt="Icon of GitHub">
+      </a>
+    }
+    @if (project.websiteLink) {
+      <a [href]="project.websiteLink" target="_blank">
+        <img src="assets/website.svg" alt="Icon of a website globe">
+      </a>
+    }
   </div>
   <div class="border">
-    <img class="cover-image" src="assets/mapex.png">
+    <img class="cover-image" src="{{project.image}}">
   </div>
   <div class="details-container">
     <section class="description">
@@ -18,39 +22,43 @@
         <h2>OVERVIEW</h2>
       </div>
       <div class="description-text">
-        <p> Xezame is a design for a recipe website, based on an interesting concept:</p>
-        <p>You input the contents of your fridge and the website gives you all the recipes you can make from hem.</p>
+        @for (paragraph of project.details.longDescription; track project.id) {
+          <p>{{paragraph}}</p>
+        }
       </div>
     </section>
-    <section class="tech-stack">
-      <h2>TECH STACK</h2>
-      <div class="tech-cards-container">
-        <div class="tech-card">
-          <img src="assets/react.svg" alt="">
-          <h3>React</h3>
-        </div>
-        <div class="tech-card">
-
-        </div>
-        <div class="tech-card">
-
-        </div>
-      </div>      
-    </section>
+    @if (project.details.stackImageStrings.length) {
+      <section class="tech-stack">
+        <h2>TECH STACK</h2>
+        <div class="tech-cards-container">
+          @for (title of project.details.stackTechnologyTitles; track title) {
+            <div class="tech-card">
+              <img [src]="'assets/' + project.details.stackImageStrings[$index]">
+              <h3>{{title}}</h3>
+            </div>
+          }
+        </div>      
+      </section>
+    }
+    @if (project.details.extras && project.details.extrasImageStrings) {
     <section class="extras">
       <h2>EXTRAS</h2>
       <div class="extras-cards-container">
-        <div class="extras-card">
-          <img src="assets/react.svg" alt="">
-          <h3>React</h3>
+          @for (title of project.details.extras; track title) {
+            <div class="extras-card" [style.width]="'calc(' + (100 / project.details.extras.length - 1) + '%)'">
+              <img src="assets/{{project.details.extrasImageStrings[$index]}}" alt="">
+              <h3>{{title}}</h3>
+            </div>
+          }
         </div>
+      </section>
+    }
+    @if (project.details.designLink) {
+      <div class="design-link">
+        <img src="assets/design.svg" alt="">
+        <p>Design available: <a [href]="project.details.designLink" target="_blank">HERE</a></p>
       </div>
-    </section>
-
-    <div class="design-link">
-      <img src="assets/design.svg" alt="">
-      <p>Design available: <a href="">HERE</a></p>
-    </div>
+    }
   </div>
 
 </main>

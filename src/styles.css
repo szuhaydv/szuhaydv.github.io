@@ -6,6 +6,10 @@
   --clr-highlight: #343438; 
 }
 
+body {
+  background-color: var(--clr-background);
+}
+
 * {
   margin: 0;
   padding: 0;

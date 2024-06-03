@@ -38,7 +38,7 @@
         <app-card [card]="latestProjects[1]"/>
       </li>
       <li class="showcase-project third-project">
-        <app-card [card]="latestProjects[2]"/>
+        <app-card (click)="showDetails(latestProjects[2])" [card]="latestProjects[2]"/>
       </li>
     </ul>
   </section>

@@ -39,6 +39,7 @@
   border: 0;
   cursor: pointer;
   transition: all 0s 0.5s linear !important;
+  background-color: transparent;
 }
 
 .button-container img {

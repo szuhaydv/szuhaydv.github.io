@@ -22,10 +22,11 @@ main {
   padding-top: 0.25rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  border: #2C3A47 5px dashed;
+  border: var(--clr-bnw-inverse) 5px dashed;
   text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--clr-bnw-inverse)
 }
 
 
@@ -118,6 +119,7 @@ main {
 
 .details-container h2 {
   font: 4rem "Marmelad";
+  color: var(--clr-bnw-inverse);
 }
 
 .details-container p {

@@ -54,6 +54,7 @@ h1 .small-font {
 
 .resume-button {
   color: black;
+  background-color: white;
 }
 
 .resume-button:hover, .contact-button:hover {

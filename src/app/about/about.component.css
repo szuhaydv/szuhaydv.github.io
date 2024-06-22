@@ -13,6 +13,7 @@ section .paragraph-container {
   display: flex;
   align-items: center;
   gap: 1%;
+  color: var(--clr-bnw-inverse)
 }
 
 section .paragraph-container:last-child {

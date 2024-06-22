@@ -53,11 +53,13 @@ export class HeaderComponent {
       document.documentElement.style.setProperty('--clr-background', '#181823')
       document.documentElement.style.setProperty('--clr-header', '#210062')
       document.documentElement.style.setProperty('--clr-bnw-inverse', '#fff')
+      document.documentElement.style.setProperty('--clr-highlight', '#2200b9')
     } else {
       document.documentElement.style.setProperty('--clr-black-white', '#fff')
       document.documentElement.style.setProperty('--clr-background', '#ebf6f7')
       document.documentElement.style.setProperty('--clr-header', '#28282B')
       document.documentElement.style.setProperty('--clr-bnw-inverse', '#000')
+      document.documentElement.style.setProperty('--clr-highlight', '#343438')
     }
     this.lightMode = !this.lightMode
   }

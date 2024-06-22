@@ -1,12 +1,12 @@
-import { Component, HostBinding } from '@angular/core';
-import { MainComponent } from './main/main.component';
+import { Component } from '@angular/core';
 import { trigger, transition, style, animate, sequence, state } from '@angular/animations';
+
 @Component({
-  selector: 'app-full-layout',
+  selector: 'app-aside',
   standalone: true,
-  imports: [MainComponent],
-  templateUrl: './full-layout.component.html',
-  styleUrl: './full-layout.component.css',
+  imports: [],
+  templateUrl: './aside.component.html',
+  styleUrl: './aside.component.css',
   animations: [
     trigger('buzz', [
       state('initial', style({ transform: 'rotate(0)'})),
@@ -22,7 +22,7 @@ import { trigger, transition, style, animate, sequence, state } from '@angular/a
     ]),
   ],
 })
-export class FullLayoutComponent {
+export class AsideComponent {
   githubState = 'initial'
   linkedinState = 'initial'
   gmailState = 'initial'
@@ -46,6 +46,4 @@ export class FullLayoutComponent {
   gmailHoverEnded() {
     this.gmailState = 'initial'
   }
-
-
 }

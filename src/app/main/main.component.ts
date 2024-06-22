@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CardComponent } from '../../projects/card/card.component';
-import { Project, ProjectDetail } from '../../projects/projectClasses';
-import { NavigationExtras, Router, RouterLink } from '@angular/router';
+import { CardComponent } from '../projects/card/card.component';
+import { Project, ProjectDetail } from '../projects/projectClasses';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CardComponent, RouterLink],
+  imports: [CardComponent, RouterLink, RouterLinkActive],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

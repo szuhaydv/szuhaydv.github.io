@@ -49,6 +49,11 @@ h1 .small-font {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   cursor: pointer;
   transition: all 0.1s linear;
+  text-decoration: none;
+}
+
+.resume-button {
+  color: black;
 }
 
 .resume-button:hover, .contact-button:hover {

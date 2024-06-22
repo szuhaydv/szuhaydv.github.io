@@ -135,6 +135,10 @@ main .latest-projects {
   list-style: none;
 }
 
+.showcase-project {
+  position: relative;
+}
+
 .latest-projects-container .showcase-project {
   height: 75%;
   width: 30%;

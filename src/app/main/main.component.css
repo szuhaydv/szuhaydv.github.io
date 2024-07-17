@@ -1,6 +1,5 @@
 main {
   width: 100%;
-  height: calc(200vh - 460px);
   background-color: var(--clr-background);
   display: flex;
   flex-direction: column;
@@ -8,9 +7,10 @@ main {
 }
 
 main .hero {
-  max-width: 1280px;
+  max-width: 88rem;
+  padding: 0 4rem;
   width: 100%;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -18,14 +18,14 @@ main .hero {
 
 h1 {
   font-family: "Abril Fatface", serif;
-  font-size: 4rem;
-  color: var(--clr-bnw-inverse)
+  font-size: clamp(2.5rem, 1.5rem + 2.083vw, 4rem);
+  color: var(--clr-bnw-inverse);
 }
 
 h1 .small-font {
   font-family: "Marmelad", sans-serif;
-  font-size: 2.25rem;
-  padding-left: 3.125rem;
+  font-size: clamp(1.5rem, 1rem + 1.042vw, 2.25rem);
+  padding-left: clamp(2.25rem, 1.667rem + 1.215vw, 3.125rem);
 }
 
 .headline-container .buttons-container {
@@ -33,16 +33,16 @@ h1 .small-font {
   margin-top: 3.125rem;
   display: flex;
   justify-content: space-between;
-  gap: 3.125rem;
+  gap: clamp(1.25rem, -0.089rem + 6.696vw, 3.125rem);
 }
 
 .buttons-container .resume-button, .buttons-container .contact-button {
-  height: 3.75rem;
-  width: 15rem;
+  height: clamp(2.5rem, 1.667rem + 1.736vw, 3.75rem);
+  width: clamp(9.75rem, 6.25rem + 7.292vw, 15rem);
   border-radius: 1.875rem;
   border: none;
   font-family: "Roboto Slab", serif;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 0.75rem + 1.042vw, 2rem);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -79,15 +79,15 @@ main .professional-image {
 }
 
 main .latest-projects {
-  max-width: 1280px;
-  width: 100%;
-  height: calc(100vh - 430px);
+  max-width: 92vw;
+  width: 80rem;
+  height: max-content;
   background-color: 	rgb(176, 216, 251);
   border-radius: 10px;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   padding: 1.25rem;
   padding-bottom: 2.5rem;
-  margin-bottom: 1.875rem;
+  margin: 0 4rem 1.875rem 4rem;
 }
 
 .latest-projects-headline-container {
@@ -98,7 +98,7 @@ main .latest-projects {
 .latest-projects-headline-container h2 {
   font-family: "Alfa Slab One", serif;
   border-bottom: 5px dashed #32557f;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
 }
 
 .latest-projects-headline-container .all-projects-button {
@@ -111,10 +111,11 @@ main .latest-projects {
   box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
   transition: all 0.13s ease-in;
   display: flex;
-  gap: 1.25rem;
+  gap: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
   padding: 0.625rem;
   cursor: pointer;
   background-color: white;
+  height: max-content;
 }
 
 .all-projects-button:hover {
@@ -122,20 +123,20 @@ main .latest-projects {
 }
 
 .all-projects-button img {
-  height: 1.875rem;
-  width: 1.875rem;
+  height: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+  width: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
   object-fit: contain;
 }
 
 .all-projects-button h3 {
   font-family: "Marmelad", sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
 }
 
 .latest-projects .latest-projects-container {
   width: 100%;
   margin-top: 1.25rem;
-  height: calc(100% - 3.75rem);
+  height: max-content;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -146,37 +147,101 @@ main .latest-projects {
 }
 
 .latest-projects-container .showcase-project {
-  height: 75%;
+  height: max-content;
   width: 30%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background-color: white;
 }
 
 .showcase-project.second-project {
-  align-self: center;
+  margin-top: 6%;
 }
 
 .showcase-project.third-project {
-  align-self: flex-end;
-}
-
-@media only screen and (max-width: 400px) {
-  .resume-button, .contact-button {
-    width: 12.5rem !important;
-    height: 3.125rem !important;
-  }
-
-  .latest-projects-headline-container h2 {
-    font-size: 2rem;
-  }
+  margin-top: 12%;
 }
 
 @media only screen and (max-width: 768px) {
   main .hero {
     flex-direction: column;
   }
+  main h1 {
+    text-align: center;
+  }
+
   main .professional-image {
     width: 100%;
     height: 50%;
   }
+
+  .latest-projects-container {
+    min-width: 100%;
+  }
+
+  .showcase-project {
+    width: 100% !important;
+  }
+
+  .latest-projects {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .latest-projects-headline-container h2 {
+    font-size: 2rem;
+  }
+
+  .latest-projects {
+    width: 96vw !important;
+  }
+
+  .headline-container {
+    width: 100vw;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+  }
+
+  .resume-button, .contact-button {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  main .latest-projects {
+    width: max-content;
+  }
+  
+  main .latest-projects-container {
+    flex-direction: column;
+    width: 50vw !important;
+    margin: auto;
+  }
+
+  .latest-projects-container .showcase-project {
+    width: 92%;
+    margin: 4rem auto 0 auto;
+  }
+
+  .latest-projects-container .showcase-project:first-child {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .latest-projects-headline-container {
+    flex-direction: column;
+  }
+
+  .all-projects-button {
+    width: max-content;
+    margin: 1rem auto 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
 }

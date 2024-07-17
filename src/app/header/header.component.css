@@ -11,8 +11,8 @@ header {
 header .logo {
   margin-left: 3.125rem;
   margin-right: auto;
-  height: 9.375rem;
-  width: 9.375rem;
+  height: clamp(6rem, 3.75rem + 4.688vw, 9.375rem);
+  width: clamp(6rem, 3.75rem + 4.688vw, 9.375rem);
   object-fit: contain;
   cursor: pointer;
 }
@@ -55,14 +55,14 @@ ul li:hover {
 
 nav a {
   font-family: "Marmelad", sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 0.833rem + 1.389vw, 2.5rem);
   color: white;
   text-decoration: none;
   padding-top: 1.25rem;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 1.875rem;
+  padding: 0 clamp(1rem, 0.417rem + 1.215vw, 1.875rem);
 }
 
 .dark-mode-toggle, .light-mode-toggle {
@@ -126,6 +126,8 @@ nav a {
 
 .mobile-header a {
   padding-top: 0;
+  color: var(--clr-header);
+  font-size: 2rem;
 }
 
 .skills {

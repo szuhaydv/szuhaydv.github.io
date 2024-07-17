@@ -11,5 +11,6 @@ footer {
 
 footer p {
   margin: auto;
-  font: 16px1rem 'Marmelad'
+  font: 16px1rem 'Marmelad';
+  text-align: center;
 }

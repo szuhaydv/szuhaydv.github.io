@@ -1,7 +1,10 @@
 section {
   max-width: 1280px;
   width: 100%;
-  height: calc(100vh - 5rem);
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin: auto;
   padding: 2.5% 7.5%;
 }
@@ -13,7 +16,8 @@ section .paragraph-container {
   display: flex;
   align-items: center;
   gap: 1%;
-  color: var(--clr-bnw-inverse)
+  color: var(--clr-bnw-inverse);
+  margin-top: 2rem;
 }
 
 section .paragraph-container:last-child {
@@ -24,10 +28,11 @@ section .paragraph-container:last-child {
   width: 20%;
   height: 100%;
   object-fit: contain;
+  margin-right: 1rem;
 }
 .paragraph-container p {
   width: 80%;
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
   font-family: "Marmelad";
   line-height: 150%;
   margin: auto 0;
@@ -35,5 +40,5 @@ section .paragraph-container:last-child {
 
 b {
   font-family: "Roboto Slab";
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
 }

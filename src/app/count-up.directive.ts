@@ -82,7 +82,7 @@ export class CountUpDirective implements OnInit {
     this.currentCount$
       .pipe(takeUntil(this.destroy$))
       .subscribe((currentCount) => {
-        const formattedCount = currentCount + '+' + '<br>' + `<span style="font-family: 'Marmelad'; font-size: 4rem; line-height: 4rem">` + this.currentTitle + '</span>';
+        const formattedCount = currentCount + '+' + '<br>' + `<span style="font-family: 'Marmelad'; font-size: clamp(2rem, 1rem + 2.083vw, 3.5rem); line-height: 4rem">` + this.currentTitle + '</span>';
         this.renderer.setProperty(
           this.elementRef.nativeElement,
           'innerHTML',

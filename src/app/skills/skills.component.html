@@ -1,10 +1,21 @@
-<section class="skills">
-  <div [@step]="currentState" class="image-container">
-    <img [src]="imageString" alt="A large image displaying David Szuhay's coding skills on sticky notes">
-  </div>
-  <div class="button-container" [style.justify-content]="containerAlignment" >
-    <button [@showButton]="showButton" (@showButton.done)="showAgain()" (click)="stepForward()">
-      <img [style.transform]="buttonRotation" src="assets/arrow-right.png" alt="An icon of a keyboard's arrow right key">
-    </button>
-  </div>
-</section>
+@if (loaded) {
+  <section class="skills">
+    <div [@step]="currentState" class="image-container">
+      <img [src]="imageString" alt="A large image displaying David Szuhay's coding skills on sticky notes">
+    </div>
+    <div class="button-container" [style.justify-content]="containerAlignment" >
+      <button [@showButton]="showButton" (@showButton.done)="showAgain()" (click)="stepForward()">
+        <img [style.transform]="buttonRotation" src="assets/arrow-right.png" alt="An icon of a keyboard's arrow right key">
+      </button>
+    </div>
+  </section>
+} @else {
+  <div @disappear class="spinner-container">
+    <div class="scaling-squares-spinner" :style="spinnerStyle">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+  </div> 
+}

@@ -1,5 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { AnimationState, KeyRotation } from './animationStates.enum';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { AnimationState } from './animationStates.enum';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -20,13 +20,32 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state('hide', style({ opacity: '0' })),
       transition('show => hide', [animate('0s 0s linear')]),
       transition('hide => show', [animate('0.3s 2s ease-in-out')]),
+    ]),
+    trigger('disappear', [
+      transition(':leave', [
+        style({ }),
+        animate('0.3s ease-in', style({ transform: 'scale(0)' }))
+      ])
     ])
   ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })
-export class SkillsComponent implements AfterViewInit {
+export class SkillsComponent implements AfterViewInit, OnInit {
   imageString = 'assets/skills.png'
+
+  ngOnInit(): void {
+    this.loadImage()
+  }
+
+  loaded = false
+  loadImage() {
+    let img = new Image()
+    img.onload = () => {
+      this.loaded = true
+    }
+    img.src = this.imageString
+  }
 
   ngAfterViewInit() {
     this.showButton = 'show'

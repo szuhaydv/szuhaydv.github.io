@@ -9,10 +9,10 @@ header {
 }
 
 header .logo {
-  margin-left: 5rem;
+  margin-left: 3.125rem;
   margin-right: auto;
-  height: 15rem;
-  width: 15rem;
+  height: 9.375rem;
+  width: 9.375rem;
   object-fit: contain;
   cursor: pointer;
 }
@@ -44,8 +44,8 @@ ul li:hover {
 
 .selected-page-decorator {
   position: absolute;
-  width: 14rem;
-  height: 1rem;
+  width: 8.75rem;
+  height: 0.625rem;
   background-color: white;
   top: 0%;
   transition: all 0.3s ease-in-out;
@@ -55,22 +55,22 @@ ul li:hover {
 
 nav a {
   font-family: "Marmelad", sans-serif;
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  padding-top: 2rem;
+  padding-top: 1.25rem;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 3rem;
+  padding: 0 1.875rem;
 }
 
 .dark-mode-toggle, .light-mode-toggle {
-  height: 3rem;
-  width: 3rem;
-  margin: 0rem 2rem 2rem 2rem;
+  height: 1.875rem;
+  width: 1.875rem;
+  margin: 0rem 1.25rem 1.25rem 1.25rem;
   background-color: white;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
@@ -85,9 +85,9 @@ nav a {
 }
 
 .mobile-header img {
-  width: 6rem;
-  height: 6rem;
-  margin: 1rem 2rem 0 0;
+  width: 3.75rem;
+  height: 3.75rem;
+  margin: 0.625rem 1.25rem 0 0;
 }
 
 .mobile-header ul {
@@ -95,8 +95,8 @@ nav a {
   top: 0;
   display: flex;
   flex-direction: column;
-  width: 35rem;
-  right: -35rem;
+  width: 21.875rem;
+  right: -21.875rem;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
@@ -109,12 +109,12 @@ nav a {
 }
 
 .close-icon {
-  padding: 0 0 0 2rem !important;
+  padding: 0 0 0 1.25rem !important;
   justify-content: flex-start !important;
 }
 
 .mobile-header li {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -141,12 +141,12 @@ nav a {
 }
 
 .dropdown li {
-  height: 8rem;
+  height: 5rem;
   display: flex;
   width: max-content;
   align-items: center;
   background-color: var(--clr-header);  
-  padding: 0 2rem;
+  padding: 0 1.25rem;
   align-self: flex-start;
 }
 

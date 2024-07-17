@@ -2,9 +2,9 @@ section {
   background-color: aliceblue;
   max-width: 768px;
   width: 100%;
-  height: calc(100vh - 16rem);
-  margin: 4rem auto;
-  padding: 4rem;
+  height: calc(100vh - 10rem);
+  margin: 2.5rem auto;
+  padding: 2.5rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -16,7 +16,7 @@ section {
 .my-email, .my-extras {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .my-email {
@@ -24,7 +24,7 @@ section {
 }
 
 .my-email p {
-  font: 3.2rem "Marmelad";
+  font: 2rem "Marmelad";
 }
 
 .my-email img {
@@ -38,8 +38,8 @@ a {
 }
 
 .contact-options img {
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
 
@@ -52,21 +52,21 @@ form {
 }
 
 input {
-  height: 4rem;
-  border-radius: 0.75rem;
-  padding-left: 1rem;
-  font: 2rem "Marmelad";
-  margin-bottom: 3rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  font: 1.25rem "Marmelad";
+  margin-bottom: 1.875rem;
 }
 
 label, h3 {
   display: block;
-  font: 2.4rem "Roboto Slab";
-  padding-bottom: 1rem;
+  font: 1.5rem "Roboto Slab";
+  padding-bottom: 0.5rem;
 }
 .name-inputs label {
-  font: 1.6rem "Marmelad";
-  padding-bottom: 3rem;
+  font: 1rem "Marmelad";
+  padding-bottom: 1.875rem;
 }
 
 .name-inputs {
@@ -95,8 +95,8 @@ textarea {
   max-width: 100%;
   height: 30%;
   font: 2.4rem "Marmelad";
-  padding: 2rem;
-  margin-bottom: 3rem;
+  padding: 1.25rem;
+  margin-bottom: 1.875rem;
 }
 
 .button-21 {
@@ -113,7 +113,7 @@ textarea {
   cursor: pointer;
   display: inline-flex;
   font-family: CircularStd,sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   height: auto;
   justify-content: center;
   line-height: 1.5;
@@ -127,7 +127,7 @@ textarea {
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
-  width: 12rem;
+  width: 7.5rem;
   align-self: flex-end;
 }
 
@@ -146,7 +146,7 @@ textarea {
 
 @media only screen and (max-width: 400px) {
   .contact-options img {
-    width: 3rem;
-    height: 3rem;
+    width: 1.875rem;
+    height: 1.875rem;
   }
 }

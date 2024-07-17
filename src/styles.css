@@ -20,14 +20,3 @@ body {
   -webkit-user-drag: none;
 }
 
-
-html {
-  font-size: 62.5%;
-}
-
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 42%;
-  }
-}
-

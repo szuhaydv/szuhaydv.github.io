@@ -1,5 +1,5 @@
 .skills {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 5rem);
   background-color: var(--clr-background);
   overflow: hidden;
   position: relative;
@@ -8,7 +8,7 @@
 .image-container {
   position: absolute;
   width: 200vw;
-  height: calc(300vh - 8rem);
+  height: calc(300vh - 5rem);
   transition: all 0.5s ease-in-out;
   transform: translateX(-3%);
 }

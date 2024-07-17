@@ -18,31 +18,31 @@ main .hero {
 
 h1 {
   font-family: "Abril Fatface", serif;
-  font-size: 6.4rem;
+  font-size: 4rem;
   color: var(--clr-bnw-inverse)
 }
 
 h1 .small-font {
   font-family: "Marmelad", sans-serif;
-  font-size: 3.6rem;
-  padding-left: 5rem;
+  font-size: 2.25rem;
+  padding-left: 3.125rem;
 }
 
 .headline-container .buttons-container {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 3.125rem;
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 3.125rem;
 }
 
 .buttons-container .resume-button, .buttons-container .contact-button {
-  height: 6rem;
-  width: 24rem;
-  border-radius: 3rem;
+  height: 3.75rem;
+  width: 15rem;
+  border-radius: 1.875rem;
   border: none;
   font-family: "Roboto Slab", serif;
-  font-size: 3.2rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -67,8 +67,8 @@ h1 .small-font {
 }
 
 .resume-button img, .contact-button img {
-  height: 3rem;
-  width: 3rem;
+  height: 1.875rem;
+  width: 1.875rem;
   object-fit: contain;
 }
 
@@ -85,9 +85,9 @@ main .latest-projects {
   background-color: 	rgb(176, 216, 251);
   border-radius: 10px;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-  padding: 2rem;
-  padding-bottom: 4rem;
-  margin-bottom: 3rem;
+  padding: 1.25rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 1.875rem;
 }
 
 .latest-projects-headline-container {
@@ -98,7 +98,7 @@ main .latest-projects {
 .latest-projects-headline-container h2 {
   font-family: "Alfa Slab One", serif;
   border-bottom: 5px dashed #32557f;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .latest-projects-headline-container .all-projects-button {
@@ -111,8 +111,8 @@ main .latest-projects {
   box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
   transition: all 0.13s ease-in;
   display: flex;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1.25rem;
+  padding: 0.625rem;
   cursor: pointer;
   background-color: white;
 }
@@ -122,20 +122,20 @@ main .latest-projects {
 }
 
 .all-projects-button img {
-  height: 3rem;
-  width: 3rem;
+  height: 1.875rem;
+  width: 1.875rem;
   object-fit: contain;
 }
 
 .all-projects-button h3 {
   font-family: "Marmelad", sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
 }
 
 .latest-projects .latest-projects-container {
   width: 100%;
-  margin-top: 2rem;
-  height: calc(100% - 6rem);
+  margin-top: 1.25rem;
+  height: calc(100% - 3.75rem);
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -162,12 +162,12 @@ main .latest-projects {
 
 @media only screen and (max-width: 400px) {
   .resume-button, .contact-button {
-    width: 20rem !important;
-    height: 5rem !important;
+    width: 12.5rem !important;
+    height: 3.125rem !important;
   }
 
   .latest-projects-headline-container h2 {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
 }
 

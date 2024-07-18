@@ -3,19 +3,15 @@ main {
   max-width: 828px;
   padding: 30px;
   width: 100%;
-  height: calc(200vh - 160px);
 }
 
 .headline-container {
-  height: calc(7.5rem - 30px);
   width: 100%;
   font: 1.75rem "Alfa Slab One";
   display: flex;
 }
 
 .headline-container h1 {
-  height: 80%;
-  max-width: calc(100% - 15rem + 60px);
   margin: 0 auto auto 0;
   line-height: 100%;
   padding-bottom: 0.25rem;
@@ -26,15 +22,18 @@ main {
   text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--clr-bnw-inverse)
+  color: var(--clr-bnw-inverse);
+  font-size: clamp(1.5rem, 0.071rem + 7.143vw, 3.5rem)
 }
 
-
 .headline-container a {
-  width: calc(7.5rem - 30px);
-  height: calc(7.5rem - 30px);
-  padding: 1.25rem;
+  width: clamp(2.5rem, 1.429rem + 5.357vw, 4rem);
+  height: clamp(2.5rem, 1.429rem + 5.357vw, 4rem);
   transition: all 0.2s ease-in-out;
+}
+
+.headline-container a:first-of-type {
+  margin-right: clamp(0.5rem, -0.043rem + 2.174vw, 1rem);
 }
 
 .headline-container a:hover {
@@ -43,7 +42,7 @@ main {
 
 .headline-container img {
   background-color: #EEF7FF;
-  border-radius: calc((5.625 - 30px) / 2);
+  border-radius: 50%;
   padding: 0.625rem;
   width: 100%;
   height: 100%;
@@ -51,68 +50,22 @@ main {
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
-.border {
-  background-color: transparent;
-  color: red;
-  position: absolute;
-  top: calc(0% + 80px + 7.5rem);
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 768px;
-  width: 100%;
-  max-height: 50vh;
-  height: 100%;
-  transform-style: preserve-3d;
-  perspective: 2000px;
+.cover-image {
+  max-width: 96%;
+  margin: 1rem 0 1rem 2%;
+  height: calc(100% - 60px);
+  background-color: #2C3A47;
+  object-fit: contain;
   transition: .4s;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border-top: 20px solid #2C3A47;
-    border-left: 20px solid #2C3A47;
-    box-sizing: border-box;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-bottom: 20px solid red;
-    border-right: 20px solid red;
-    box-sizing: border-box;
-  }
-
-  .cover-image {
-    position: absolute;
-    top: 30px;
-    left: -30px;
-    width: calc(100% + 60px);
-    height: calc(100% - 60px);
-    background-color: #2C3A47;
-    object-fit: contain;
-    transition: .4s;
-    border-radius: 1.25rem;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  &:hover {
-    .cover-image {
-      transform: rotateY(20deg) skewY(-3deg)
-    }
-    transform: translateX(-50%) rotateY(-20deg) skewY(3deg)
-  }
+  border-radius: 1.25rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.cover-image:hover {
+  transform: rotate(-1deg) scale(0.96)
 }
 
+
 .details-container {
-  position: absolute;
-  top: calc(100px + 7.5rem + 50vh);
-  height: calc(200vh - (180px + 7.5rem + 50vh));
   max-width: 768px;
   width: 100%;
 }
@@ -123,11 +76,7 @@ main {
 }
 
 .details-container p {
-  font: 1.5rem "Marmelad"
-}
-
-.description {
-  height: calc(100vh - (100px + 7.5rem + 50vh));
+  font: clamp(1rem, 0.457rem + 2.174vw, 1.5rem) "Marmelad"
 }
 
 .description-headline {
@@ -149,6 +98,8 @@ main {
   padding: 0.625rem 1.25rem;
   background-color: #EEF7FF;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 96%;
+  margin: auto;
 }
 
 .description p {
@@ -162,20 +113,21 @@ main {
 
 .tech-stack {
   padding-top: 5vh;
+  height: max-content !important;
 }
 
 .tech-cards-container, .extras-cards-container {
-  height: 30vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 4vh;
 }
 
 .tech-card, .extras-card {
-  width: 27.5%;
-  max-width: 27.5%;
-  height: 100%;
+  width: 100% !important;
+  height: 10rem;
   background-color: #EEF7FF;
   padding: 1rem;
   border-radius: 0.375rem;
@@ -189,8 +141,9 @@ main {
 
 .tech-card img, .extras-card img {
   width: 100%;
+  max-height: 50%;
   object-fit: contain;
-  max-height: 80%;
+  margin-bottom: 1rem;
 }
 
 .tech-card h3, .extras-card h3 {

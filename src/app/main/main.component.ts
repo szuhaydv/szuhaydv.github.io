@@ -2,19 +2,37 @@ import { Component } from '@angular/core';
 import { CardComponent } from '../projects/card/card.component';
 import { Project, ProjectDetail } from '../projects/projectClasses';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-main',
   standalone: true,
   imports: [CardComponent, RouterLink, RouterLinkActive],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  styleUrl: './main.component.css',
+  animations: [
+    trigger('scaleInOut', [
+      transition(':enter', [
+        style({ transform: 'translateX(-50%) scale(0)' }),
+        animate('0.3s ease-out', style({ transform: 'translateX(-50%) scale(1)' }))
+      ]),
+      transition(':leave', [
+        style({ transform: 'translateX(-50%) scale(1)' }),
+        animate('0.3s ease-out', style({ transform: 'translateX(-50%) scale(0)' }))
+      ]),
+    ])
+  ]
 })
 export class MainComponent {
   router: Router
 
   constructor(router: Router) {
     this.router = router
+  }
+
+  showLinks = false
+  toggleLinks() {
+    this.showLinks = !this.showLinks
   }
 
   latestProjects = [

@@ -52,6 +52,10 @@ h1 .small-font {
   text-decoration: none;
 }
 
+.resume-container {
+  position: relative;
+}
+
 .resume-button {
   color: black;
   background-color: white;
@@ -59,6 +63,45 @@ h1 .small-font {
 
 .resume-button:hover, .contact-button:hover {
   transform: scale(1.05) rotate(2deg);
+}
+
+.resume-links {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  font: 1.5rem 'Marmelad';
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background: white;
+  border: 1px solid black;
+  box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+}
+
+.resume-links a {
+  color: navy;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.resume-links a:hover {
+  transform: scale(1.04);
+  color: red;
+}
+
+.resume-links a:first-child {
+  display: flex;
+}
+
+.resume-links a:first-child::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  margin-inline: 1rem;
+  pointer-events: none;
 }
 
 .buttons-container .contact-button {
@@ -206,6 +249,11 @@ main .latest-projects {
 
   .resume-button, .contact-button {
     margin: auto;
+  }
+
+  .resume-links {
+    top: auto;
+    bottom: calc(100% + 1rem) !important;
   }
 }
 

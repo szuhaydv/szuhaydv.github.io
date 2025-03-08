@@ -73,7 +73,7 @@ export class ProjectsComponent {
   leaveCapabilities() {
     if (this.showCapabilites) {
       this.showCapabilites = false
-    } 
+    }
   }
 
   selectFramework(id: number) {
@@ -86,10 +86,10 @@ export class ProjectsComponent {
     this.filteredSearch()
   }
 
-  
+
   projectsData = [
-    new Project(0, 'assets/mr. chili.png', 'Mr. Chili', "A website for a small business in the field of chilis!", ["Angular", "Deployed", "SEO", "Responsive"], true,
-      new ProjectDetail(["Mr. Chili is a website made for a client, who is in the chili sauce business.", "This site was created with careful consideration of client needs with a professional and modern design."], ["angular.svg", "supabase.png", "node-express.svg", "vercel.svg"], ["Angular", "Supabase", "Node & Express", "Vercel"], ["SEO", "Responsive"], ["seo.svg", "responsive.svg"], "https://www.figma.com/design/kc9SOe7QktNPUf6FYxI6LS/Chili-Cs%C3%A1v%C3%B3?node-id=20-2&t=lkZ3f87kPmu0mSQ9-0"), 'https://mrchili.vercel.app/', 'https://github.com/Szuhaydv/mrchili'),
+    new Project(0, 'assets/mrchili.png', 'Mr. Chili', "An ecommerce site for the best artisan chili sauce in town!", ["Svelte", "Deployed", "SEO", "Responsive"], true,
+      new ProjectDetail(["Mr. Chili is a website made for a client, who is in the chili sauce business.", "This site was created with careful consideration of client needs with a professional and modern design."], ["angular.svg", "supabase.png", "node-express.svg", "vercel.svg"], ["Angular", "Supabase", "Node & Express", "Vercel"], ["SEO", "Responsive"], ["seo.svg", "responsive.svg"], "https://www.figma.com/design/kc9SOe7QktNPUf6FYxI6LS/Chili-Cs%C3%A1v%C3%B3?node-id=20-2&t=lkZ3f87kPmu0mSQ9-0"), 'https://mrchili.hu', 'https://github.com/szuhaydv/mrchili-v2'),
     new Project(1, 'assets/mapex.png', 'Mapex', "Pindrop your favourite travel destinations and create beautiful maps to share!", ["React", "Full Stack", "Database", "API Calls", "Auth", "Deployed"], true,
       new ProjectDetail(["I always loved traveling and planning ahead what places I want to visit.", "Try it youself with username:demo123 password:123", "Mapex was born because there was simply no app on the market to display all your travel destinations on a single map."], ["react.svg", "node-express.svg", "mongodb.svg"], ["React", "Node & Express", "MongoDB"], ["Mapbox", "Stripe", "Self-written Encryption", "Netlify", "EmailJS"], ["mapbox.svg", "stripe.svg", "auth.svg", "netlify.svg", "emailjs.png"], undefined), "https://mapexsite.netlify.app/", 'https://github.com/Szuhaydv/mapex-frontend'),
     new Project(2, 'assets/rankmaster-web.png', 'RankMaster', 'Fully fledged SaaS tierlist minigame!', ["Angular", "Deployed", "Responsive", "API Calls", "Full Stack", "Database", "Auth"], true,
@@ -102,18 +102,20 @@ export class ProjectsComponent {
       new ProjectDetail(["I always loved cooking, so it came natural that my first website that I ever published online was a recipe site!", "Space-Spice is a concept for a small restaurant that uses the Spoonacular API to query for recipes that are to your liking!"], ["react.svg", "spoonacular.svg"], ["React", "Spoonacular API"], ["Netlify"], ["netlify.svg"]), "https://space-spice.netlify.app/", 'https://github.com/Szuhaydv/space-spice'),
     new Project(6, 'assets/rankmaster.png', 'RankMaster Mobile', "A minigame app based on ranking tier lists!", ["Mobile", "Full Stack", "Database", "API Calls", "Auth"], false,
       new ProjectDetail(["RankMaster is a mobile minigame app that is based on ranking tier lists.", "It is pretty fun and a project I will definitely pursue later to see it being launched!"], ["swift.svg", "firebase.svg"], ["Swift & SwiftUI", "Firebase"], undefined, undefined, 'https://www.figma.com/design/x5pI17GpGif2Qma5rW1QzI/RankMaster-(Mobile)?node-id=0-1&t=230oLqm3MT4Hg8sr-0'), undefined, 'https://github.com/Szuhaydv/RankMaster'),
-      new Project(7, 'assets/portfolio.png', 'Original Portfolio', "The original version of my portfolio website", ["React", "Deployed"], true,
+    new Project(7, 'assets/mr. chili.png', 'Mr. Chili v1', "A website for a small business in the field of chilis!", ["Angular", "Deployed", "SEO", "Responsive"], true,
+      new ProjectDetail(["Mr. Chili is a website made for a client, who is in the chili sauce business.", "This site was created with careful consideration of client needs with a professional and modern design."], ["angular.svg", "supabase.png", "node-express.svg", "vercel.svg"], ["Angular", "Supabase", "Node & Express", "Vercel"], ["SEO", "Responsive"], ["seo.svg", "responsive.svg"], "https://www.figma.com/design/kc9SOe7QktNPUf6FYxI6LS/Chili-Cs%C3%A1v%C3%B3?node-id=20-2&t=lkZ3f87kPmu0mSQ9-0"), 'https://mrchili.vercel.app/', 'https://github.com/Szuhaydv/mrchili-v1'),
+    new Project(8, 'assets/portfolio.png', 'Original Portfolio', "The original version of my portfolio website", ["React", "Deployed"], true,
         new ProjectDetail(["My Original Portfolio with features like parallax scrolling and a bunch of cool animations"],  ["react.svg"], ["React"], ["Framer Motion", "Parallax Scroll", "Responsive", "EmailJS"], ["framer motion.png", "parallax.svg", "responsive.svg", "emailjs.png"], undefined), 'https://szuhaydv-portfolio.netlify.app/', 'https://github.com/Szuhaydv/portfolio'),
-    new Project(8, 'assets/cooltodo.png', 'Cool ToDo List', "My first iOS app, a nice looking todo list", ["Mobile", "Full Stack", "API Calls", "Database", "Auth"], false,
+    new Project(9, 'assets/cooltodo.png', 'Cool ToDo List', "My first iOS app, a nice looking todo list", ["Mobile", "Full Stack", "API Calls", "Database", "Auth"], false,
       new ProjectDetail(["Cool ToDo list was my first ever mobile app,", "It is a full stack project utilizing Firebase and it helped me learn the basics of Swift"], ["swift.svg", "firebase.svg"], ["Swift & SwiftUI", "Firebase"], undefined, undefined, 'https://www.figma.com/design/sFCO9BC7FhnQunbRHh7RU8/iOS-To-do-List?node-id=9-2&t=uU4x9avQFJPNm3or-0'), undefined, 'https://github.com/Szuhaydv/Cool-ToDo-List'),
-    new Project(9, 'assets/mapx.png', 'MapX', "A real-life map app where fog envelops unexlplored areas", ["Mobile", "Auth"], false,
+    new Project(10, 'assets/mapx.png', 'MapX', "A real-life map app where fog envelops unexlplored areas", ["Mobile", "Auth"], false,
       new ProjectDetail(["MapX is one of my greatest endeavours in mobile development so far. It uses UIKit and MapKit to render and mask layers.", "It is a gamified map app where unexplored areas are enveloped in fog, and you can visit a bunch of mystery locations!"], ["swift.svg", "firebase.svg"], ["Swift & UIKit", "Firebase"], ["MapKit"], ["mapkit.png"], 'https://www.figma.com/design/TFDlKVUr0bQZptkaXPKYm1/MapX?node-id=3-120&t=V9aTg6DQz5WEJjsd-0'), undefined, 'https://github.com/Szuhaydv/MapX'),
-    new Project(10, 'assets/xezame.png', 'Xezame', "A recipe website which based on ingredients in your frdige tells you recipes", [], false,
+    new Project(11, 'assets/xezame.png', 'Xezame', "A recipe website which based on ingredients in your frdige tells you recipes", [], false,
       new ProjectDetail(["Xezame is a recipe app with a twist!", "It has a special feature where you can specify all the ingredients in your fridge, and it shows you all the recipes you can make from them."], [], [])),
   ]
-  
+
   projects = [ ...this.projectsData ]
-  
+
   filteredSearch() {
     this.projects = [ ...this.projectsData ]
     let filteredProjects = [...this.projectsData]
@@ -129,7 +131,7 @@ export class ProjectsComponent {
           if (project.tags.includes(tag)) {
             return true
           }
-        } 
+        }
         return false
       })
     }
